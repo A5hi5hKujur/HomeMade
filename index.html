@@ -1,0 +1,494 @@
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8"/>
+    <title>Handiman</title>
+    <link href="css/bootstrap.css" rel="Stylesheet"/>
+    <link href="css/animate.css" rel="Stylesheet"/>
+    <link href="style.css" rel="Stylesheet"/>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.js"></script> <!-- UI -->
+    <script src="js/carousel.js"></script> <!-- Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/sript.js"></script>
+    <style>
+      .search-ajax-list-item{
+        background: rgba(0,0,0,0.5);
+        color: white;
+        cursor: pointer;
+        width: 50%;
+      }
+      .search-ajax-list-item{
+        padding: 12px;
+      }
+    </style>
+  </head>
+  <body class="homepage">
+    <!-- Header Section -->
+
+    <!-- navigation Section -->
+    <div class="home-navigation-bar">
+      <ul class="navigation-content-1" style="display: flex;">
+        <li class="site-logo"><a href="index.html"><img class="logo" height="80px" width="100px" src="media/logo.png"/></a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="">Packages</a></li>
+      </ul>
+      <a class="navigation-content-2" href="login.html">Login</a>
+    </div>
+
+    <!-- Mobile Navigation -->
+
+    <nav class="navigation">
+    <div class="sidebar">
+      <div class="sidebar-list">
+          <div class="sidebar-item"><a href="service.html" class="sidebar-anchor">Service</a></div>
+          <div class="sidebar-item"><a href="#" class="sidebar-anchor">Packages</a></div>
+          <div class="sidebar-item"><a href="login.html" class="sidebar-anchor">Login</a></div>
+        </div>
+      </div>
+    <div class="nav-divider">
+      <div class="nav-container-1">
+          <div id="nav-icon4"><span></span><span></span><span></span></div>
+      </div>
+      <div class="nav-container-3"><a href="index.html">HomeMade</a></div>
+    </div>
+    </nav>
+
+    <script>
+    $(function()
+    				{
+    					navBar();			// script for client transition
+    				});
+    function navBar()
+    {
+      $(window).scroll(function () {
+        var offset = $(window).scrollTop();
+        if(offset>50)    // Desktop
+        {
+          $('.navigation-content-1>li>a').css("color","black");
+          $('.home-navigation-bar').css("background","white");
+          $('.navigation-content-2').css("background","black");
+          $('.navigation-content-2').css("border","none");
+          $('.navigation-content-2').css("color","white");
+        }
+        else {
+          $('.navigation-content-1>li>a').css("color","white");
+          $('.home-navigation-bar').css("background","rgba(233,233,233,.05)");
+          $('.navigation-content-2').css("background","white");
+          $('.navigation-content-2').css("border","1px solid white");
+          $('.navigation-content-2').css("color","black");
+        }
+      });
+    }
+    </script>
+    <!-- End of Mobile Navigation -->
+
+    <!-- End of navigation Section -->
+
+    <!-- Razor div -->
+    <div class="razor-div"></div>
+    <!-- End of Razor div -->
+
+    <!-- Start Home banner -->
+    <div class="home-banner">
+      <!-- Start Carousel -->
+      <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="active item">
+            <!-- Search Bar -->
+
+            <form name="homeSearchBar" autocomplete="off">
+              <h1>BOOK A SERVICE NOW !</h1>
+              <h3>AND JUST SIT BACK AND RELAX</h3>
+              <input name="searchText" class="service-search" type="text" placeholder="Search a service"/>
+              <div class="search-ajax"></div>
+              <input class="orange-button" type="submit" value="SEARCH" method="post" style="display: block;" formaction="search_result.html"/>
+              <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </form>
+            <a href="service_detail.html"><div class="banner-attention">
+              <div class="banner-attention-name">
+                <h6 class="service-name">Home Salon</h6>
+                <p class="service-price">Starting at 299</p>
+              </div>
+              <div class="banner-attention-icon"></div>
+            </div></a>
+          </div>
+
+          <div class="item">
+            <!-- Search Bar -->
+            <form name="homeSearchBar" autocomplete="off">
+              <h1>BOOK A SERVICE NOW !</h1>
+              <h3>AND JUST SIT BACK AND RELAX</h3>
+              <input name="searchText" class="service-search" type="text" placeholder="Search a service"/>
+              <div class="search-ajax"></div>
+              <input class="orange-button" type="submit" value="SEARCH" method="post" style="display: block;" formaction="search_result.html"/>
+              <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </form>
+            <a href="service_detail.html"><div class="banner-attention">
+              <div class="banner-attention-name">
+                <h6 class="service-name">Laundry Services</h6>
+                <p class="service-price">Starting at 120</p>
+              </div>
+              <div class="banner-attention-icon"></div>
+            </div></a>
+          </div>
+
+          <div class="item">
+            <!-- Search Bar -->
+            <form name="homeSearchBar" autocomplete="off">
+              <h1>BOOK A SERVICE NOW !</h1>
+              <h3>AND JUST SIT BACK AND RELAX</h3>
+              <input name="searchText" class="service-search" type="text" placeholder="Search a service"/>
+              <div class="search-ajax"></div>
+              <input class="orange-button" type="submit" value="SEARCH" method="post" style="display: block;" formaction="search_result.html"/>
+              <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </form>
+            <a href="service_detail.html"><div class="banner-attention">
+              <div class="banner-attention-name">
+                <h6 class="service-name">Live Band</h6>
+                <p class="service-price">Starting at 2000</p>
+              </div>
+              <div class="banner-attention-icon"></div>
+            </div></a>
+          </div>
+        </div>
+
+
+
+        <!-- End Of Search -->
+      </div>
+      <!-- Carousel End-->
+    </div>
+    <!-- End Home banner -->
+
+    <!-- Start About Section -->
+    <div class="home-about-section">
+      <h2><strong>How</strong> it Works</h2>
+      <div class="about-card-holder">
+        <div class="about-card-unit">
+          <div class="about-card-image about-card-image-1"></div>
+          <h4>Select Service</h4>
+          <p>Choose From our various services.</p>
+        </div>
+
+        <div class="about-card-unit">
+          <div class="about-card-image about-card-image-2"></div>
+          <h4>Schedule Service</h4>
+          <p>Schedule an appointment as per your choice.</p>
+        </div>
+
+        <div class="about-card-unit">
+          <div class="about-card-image about-card-image-3"></div>
+          <h4>Select Professional</h4>
+          <p>Choose your favorate professional for the job.</p>
+        </div>
+
+        <div class="about-card-unit">
+          <div class="about-card-image about-card-image-4"></div>
+          <h4>Book Service</h4>
+          <p>Confirm Booking with prepaid or COD payment option.</p>
+        </div>
+      </div>
+      <a href="service.php" class="orange-button">Choose Services</a>
+    </div>
+    <script>
+    $(window).scroll(function() {
+      var hT = $('.home-about-section').offset().top,
+      hH = $('.home-about-section').outerHeight(),
+      wH = $(window).height(),
+      wS = $(this).scrollTop();
+      if (wS > (hT+hH-wH)){
+        $( ".about-card-unit" ).addClass( "animated fadeInUp" );
+      }
+    });
+    </script>
+    <!-- End About Section -->
+    <script>
+    $("#view-more-services").click(function(){
+      window.location = "service.html";
+    });
+    </script>
+    <!-- Start Feature section -->
+    <div class="home-featured-service">
+      <div class="featured-service-discription">
+        <h1><b>Featured</b> Services</h1>
+        <p>
+          We help customers hire trusted professionals for all their service needs.
+          We are staffed with young, passionate people working tirelessly to make
+          a difference in the lives of people by catering to their service needs
+          at their doorsteps. We provide housekeeping services which consist of
+          Plumbers, Electricians, Carpenters, Cleaning and Pest Control. We also
+          provide personal services like beauty, spa, mobile and other appliance
+          repairs etc. Be it getting a plumbing job done, improving your fitness
+          through yoga, decorating your home or getting candid photos of your
+          wedding clicked, we are a sure shot destination for your service needs.
+        </p>
+
+      </div>
+      <ul class="featured-service-list">
+        <li class="service-unit hidden">
+          <div class="service-thumbnail" style="background-image:url(media/Services_Thumbnail/home_cleaning.jpg);"></div>
+          <div class="service-name">Home Cleaning</div>
+        </li>
+        <li class="service-unit hidden">
+          <div class="service-thumbnail" style="background-image:url(media/Services_Thumbnail/moving_service.jpg);"></div>
+          <div class="service-name">Moving Sevices</div>
+        </li>
+        <li class="service-unit hidden">
+          <div class="service-thumbnail" style="background-image:url(media/Services_Thumbnail/home_spa.jpg);"></div>
+          <div class="service-name">Home Spa</div>
+        </li>
+        <li class="service-unit hidden">
+          <div class="service-thumbnail" style="background-image:url(media/Services_Thumbnail/home_design.jpg);"></div>
+          <div class="service-name">Home Design</div>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+    $(window).scroll(function() {
+      var hT = $('.featured-service-list').offset().top,
+      hH = $('.featured-service-list').outerHeight(),
+      wH = $(window).height(),
+      wS = $(this).scrollTop()-2000;
+      if (wS > (hT+hH-wH)){
+        $( ".service-unit" ).removeClass( "hidden" );
+        $( ".service-unit" ).addClass( "animated fadeInRightBig" );
+      }
+    });
+    </script>
+    <!-- End Feature section -->
+
+    <!-- Start Review Section -->
+      <div class="home-review-section">
+        <div class="home-review-section-overlay">
+          <!-- CLIENT TESTIMONIALS -->
+
+          <div class="testimonial-content">
+            <h2><b>Customer</b> Reviews </h2>
+                    <div class="testimonial-container">
+
+                          <div class="testimonial-controls">
+                            <div class="testimonial-control-prev">
+                              <?xml version="1.0" encoding="iso-8859-1"?>
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="50px" width="50px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve"><g><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"/></g></svg>
+                            </div>
+
+                            <div class="testimonial-control-next">
+                              <?xml version="1.0" encoding="iso-8859-1"?>
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"height="50px" width="50px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve"><g><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225  c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/></g></svg>
+                            </div>
+                          </div>
+
+                          <div class="testimonial-belt">
+                            <!-- Accenture unit -->
+                            <div class="testimonial-unit animated flipInX">
+                                <div class="testimonial-picture" style="background-image:url(media/testimonials/5.jpg);"></div>
+                                <h3>Asim Soherwardi</h3>
+                                <p>It was popularised in the 1960s with the release of
+                                  Letraset sheets containing Lorem Ipsum passages, and
+                                  more recently with desktop publishing software like
+                                  Aldus PageMaker including versions of Lorem Ipsum.
+                                  Why do we use it? It is a long established fact
+                                  that a reader will be distracted by the readable
+                                  content of a page when looking at its layout.</p>
+                              </div>
+
+                              <!-- Alexion unit-->
+                              <div class="testimonial-unit animated flipInX">
+                                  <div class="testimonial-picture" style="background-image:url(media/testimonials/1.jpg);"></div>
+                                  <h3>Testiment name</h3>
+                                  <p>It was popularised in the 1960s with the release of
+                                    Letraset sheets containing Lorem Ipsum passages, and
+                                    more recently with desktop publishing software like
+                                    Aldus PageMaker including versions of Lorem Ipsum.
+                                    Why do we use it? It is a long established fact
+                                    that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                  </p>
+                              </div>
+
+                              <!-- Atos unit-->
+                              <div class="testimonial-unit animated flipInX">
+                                  <div class="testimonial-picture" style="background-image:url(media/testimonials/2.jpg);"></div>
+                                  <h3>Testiment name</h3>
+                                  <p>It was popularised in the 1960s with the release of
+                                    Letraset sheets containing Lorem Ipsum passages, and
+                                    more recently with desktop publishing software like
+                                    Aldus PageMaker including versions of Lorem Ipsum.
+                                    Why do we use it? It is a long established fact
+                                    that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.</p>
+                                  </div>
+
+                                  <!-- JPM unit -->
+                                  <div class="testimonial-unit animated flipInX">
+                                      <div class="testimonial-picture" style="background-image:url(media/testimonials/3.jpg);"></div>
+                                      <h3>Testiment name</h3>
+                                      <p>It was popularised in the 1960s with the release of
+                                        Letraset sheets containing Lorem Ipsum passages, and
+                                        more recently with desktop publishing software like
+                                        Aldus PageMaker including versions of Lorem Ipsum.
+                                        Why do we use it? It is a long established fact
+                                        that a reader will be distracted by the readable
+                                        content of a page when looking at its layout.
+                                      </p>
+                                  </div>
+
+                                        <!-- LeadSoft unit -->
+                                        <div class="testimonial-unit animated flipInX">
+                                            <div class="testimonial-picture" style="background-image:url(media/testimonials/4.jpg);"></div>
+                                            <h3>Testiment name</h3>
+                                            <p> It was popularised in the 1960s with the release of
+                                              Letraset sheets containing Lorem Ipsum passages, and
+                                              more recently with desktop publishing software like
+                                              Aldus PageMaker including versions of Lorem Ipsum.
+                                              Why do we use it? It is a long established fact
+                                              that a reader will be distracted by the readable
+                                              content of a page when looking at its layout.
+                                            </p>
+                                        </div>
+                                      </div>  <!-- End of "employer-belt" -->
+
+                                      <div class="testimonial-logos">
+                                        <div class="testimonial-logo"></div>
+                                        <div class="testimonial-logo"></div>
+                                        <div class="testimonial-logo"></div>
+                                        <div class="testimonial-logo"></div>
+                                        <div class="testimonial-logo"></div>
+                                      </div>
+                                    </div>  <!-- End of "employer-container" -->
+                                  </div>  <!-- End of "employer-wrapper" -->
+
+          <!-- End CLIENT Testimonials -->
+        </div>
+      </div>
+    <!-- End Review Secion -->
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-links">
+        <div class="footer-links-unit">
+          <h1>About Us</h1>
+          <ul>
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">Why We Are</a></li>
+            <li><a href="#">What We Do</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-unit">
+          <h1>Policies</h1>
+          <ul>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Security Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-unit">
+          <h1>Useful Links</h1>
+          <ul>
+            <li><a href="#">Free Consultation</a></li>
+            <li><a href="#">Packages</a></li>
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">Nutrition Facts</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-unit">
+          <h1>Help & Support</h1>
+          <ul>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-unit">
+          <h1>Follow US</h1>
+          <ul>
+            <li class="social-icon" style="background-image:url(media/social/1.png);"></li>
+            <li class="social-icon" style="background-image:url(media/social/2.png);"></li>
+            <li class="social-icon" style="background-image:url(media/social/3.png);"></li>
+            <li class="social-icon" style="background-image:url(media/social/4.png);"></li>
+            <li class="social-icon" style="background-image:url(media/social/5.png);"></li>
+            <li class="social-icon" style="background-image:url(media/social/6.png);"></li>
+            <li class="social-icon" style="background-image:url(media/social/7.png);"></li>
+            <li class="social-icon" style="background-image:url(media/social/8.png);"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-tags">
+        <p>© 2018 Home Made. All rights reserved</p>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+
+      <script>
+      $(document).ready(function(){
+        $('.service-search').keyup(function(){
+          var search_query = $(this).val();
+          if(search_query != '')
+          {
+            $.ajax({
+              url:"homepage_search.php",
+              method:"POST",
+              data:{search_query:search_query},
+              success:function(data)
+              {
+                $('.search-ajax').fadeIn();
+                $('.search-ajax').html(data);
+              }
+            });
+          }
+        });
+        $(document).on('click', 'li', function(){
+           $('.service-search').val($(this).text());
+           $('.search-ajax').fadeOut();
+      });
+      });
+      </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,222 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8"/>
+    <title>Login</title>
+    <link href="css/bootstrap.css" rel="Stylesheet"/>
+    <link href="css/animate.css" rel="Stylesheet"/>
+    <link href="style.css" rel="Stylesheet"/>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.js"></script> <!-- UI -->
+    <script src="js/carousel.js"></script> <!-- Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/sript.js"></script>
+    <style>
+      .search-ajax-list-item{
+        background: rgba(0,0,0,0.5);
+        color: white;
+        cursor: pointer;
+        width: 50%;
+      }
+      .search-ajax-list-item{
+        padding: 12px;
+      }
+    </style>
+
+  </head>
+  <body class="login-page">
+    <!-- navigation Section -->
+    <div class="home-navigation-bar">
+      <ul class="navigation-content-1" style="display: flex;">
+        <li class="site-logo"><a href="index.html"><img class="logo" height="80px" width="100px" src="media/logo.png"/></a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="">Packages</a></li>
+      </ul>
+      <a class="navigation-content-2" href="login.html">Login</a>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="navigation">
+    <div class="sidebar">
+      <div class="sidebar-list">
+          <div class="sidebar-item"><a href="service.html" class="sidebar-anchor">Service</a></div>
+          <div class="sidebar-item"><a href="#" class="sidebar-anchor">Packages</a></div>
+          <div class="sidebar-item"><a href="login.html" class="sidebar-anchor">Login</a></div>
+        </div>
+      </div>
+    <div class="nav-divider">
+      <div class="nav-container-1">
+          <div id="nav-icon4"><span></span><span></span><span></span></div>
+      </div>
+      <div class="nav-container-3"><a href="index.html">HomeMade</a></div>
+    </div>
+    </nav>
+    <!-- End Mobile Navigation -->
+
+    <div class="main">
+      <div class="col-main">
+        <div class="account-login">
+          <div class="container">
+            <div class="hero" style="background-image: url(media/login_image.jpg);">    <!-- Login Hero Image -->
+            <!--  <div class="hero-overlay"> -->
+                <h1 class="headline">Welcome</h1>
+                <p class="description">keep track of all your ongoing services,  or sign up as a professional and expand your business</p>
+                <a href="handyman_signup.html" style="color:white; text-align:center; margin: 0px auto 50px auto; border:1px solid white; width: 150px;padding:10px;">Join as Handyman</a>
+              </div>
+        <!--    </div> -->
+            <!-- Login Form -->
+            <div class="login-content">
+              <div class="tabs">
+                <ul>
+                  <li class="login-tab-sign-in"><a href="#">Sign In</a></li>      <!-- Tab to switch to sign in -->
+                  <li class="login-tab-sign-up "><a href="#">Sign Up</a></li>     <!-- Tab to switch to sign in -->
+                </ul>
+                <!-- SIGN IN SECTION FOR EXISTING USERS -->
+                <div class="login-tab-content" id="sign-in">
+
+                  <form action="profile.html" method="post"  name="userLoginForm">
+                    <input type="email" placeholder="Email" name="login_email" value="" id="email" class="input-text required-entry validate-email" title="Email Address" required/>
+                    <input type="password" placeholder="Password"  name="login_password" class="input-text required-entry validate-password" id="pass" title="Password" required/>
+                    <input type="submit" value="Login" class="button" title="Login" name="submit"/>
+                  </form>
+                    <a href="#" class="forgot">Reset Password</a>
+                  <div class="sign-up-mobile-view">SIGN UP NOW</div>
+
+                </div>
+                <!-- END OF SIGN IN SECTION FOR EXISTING USERS -->
+
+                <!-- SIGN UP FOR NEW USERS FORM -->
+                <div class="login-tab-content" id="sign-up">
+                  <form name ="userSignupform" action="upload.php?login=2" method="post" onsubmit="return validate()">
+                    <input type="hidden" name="success_url" value="" />
+                    <input type="hidden" name="error_url" value="" />
+                    <input type="hidden" name="form_key" value="TStjUDw4LxdM6Vf2" />
+                    <div class="sign-up-name-wrapper">
+                      <input type="text" placeholder="First Name" id="firstname" name="firstname" value="" title="First Name" maxlength="255" class="input-text required-entry" required/>
+                      <input type="text" placeholder="Last Name" id="lastname" name="lastname" value="" title="Last Name" maxlength="255" class="input-text required-entry" required/>
+                    </div>
+                    <input type="text" placeholder="Phone Number" id="phonenumber" name="phonenumber" value="" title="Phone Number" maxlength="12" class="input-text required-entry" required/>
+                    <input type="email" placeholder="Email" name="email" id="email_address" value="" title="Email Address" class="input-text validate-email required-entry" required/>
+                    <input type="password" placeholder="Password" name="password" id="password" title="Password" class="input-text required-entry validate-password" required/>
+                    <input type="password" placeholder="Confirm Password"name="confirmation" title="Confirm Password" id="confirmation" class="input-text required-entry validate-cpassword" required/>
+                    <input type="submit" title="Submit" class="button" value="Signup" />
+                  </form>
+                  <script>
+                  function validate()
+                  {
+                    var input_password = document.userSignupform.password.value;
+                    var confirm_password = document.userSignupform.confirmation.value;
+                    if(input_password != confirm_password)
+                    {
+                      alert("Please input same password in both fields");
+                      return false;
+                    }
+                  }
+                  </script>
+
+                  <div class="sign-in-mobile-view">SIGN IN</div>
+                  <p>By clicking "Sign Up" you agree to the <a href="#" class="terms-and-conditions">terms</a> and <a href="#" class="terms-and-conditions">conditions</a>.</p>
+                </div>
+                <!-- END OF SIGN UP FOR NEW USER FORM -->
+
+                <!-- FORGOT PASSWORD -->
+                <div class="forget-password-form" id="forgot-password">
+                  <form action="http://trucar.in/customer/account/forgotpasswordpost/" method="post" id="form-validate">
+                    <p>Please enter your email address below. To recieve a link allowing you to reset your password.</p>
+                    <input type="text" placeholder="EMAIL" name="email" alt="email" id="email_address" class="input-text required-entry validate-email" value="" /> <!-- Enter email here -->
+                    <button type="sub mit" title="Submit" class="button">REQUEST RESET</button>
+                    <a class="back-to-login-link" href="#">Back to Login</a>
+                  </form>
+
+
+                </div>
+                <!-- END OF FORGOT PASSWORD -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+      <script>
+      $(function()
+      				{
+      					loginPageToggle();
+              });
+
+        function loginPageToggle()
+        {
+          $(function(){
+            $('.login-tab-sign-in').addClass('active');
+            $('.login-tab-sign-up').click(function(event)
+            {
+              $('.login-tab-sign-in').removeClass('active');
+              $('.login-tab-sign-up').addClass('active');
+              $('#sign-in').css("display","none");
+              $('#sign-up').css("display","block");
+            });
+            $('.login-tab-sign-in').click(function(event)
+            {
+              $('.login-tab-sign-up').removeClass('active');
+              $('.login-tab-sign-in').addClass('active');
+              $('#sign-up').css("display","none");
+              $('#sign-in').css("display","block");
+            });
+            $('.back-to-login-link').click(function(event)
+            {
+              $('.login-tab-sign-up').removeClass('active');
+              $('.login-tab-sign-in').addClass('active');
+              $('#sign-up').css("display","none");
+              $('#sign-in').css("display","block");
+              $('#forgot-password').css("display","none");
+              $('.login-tab-sign-in').css("display","block");
+              $('.login-tab-sign-up').css("display","block");
+            });
+            $('.forgot').click(function(event)
+            {
+              $('#sign-in').css("display","none");
+              $('#sign-up').css("display","none");
+              $('.login-tab-sign-in').css("display","none");
+              $('.login-tab-sign-up').css("display","none");
+              $('#forgot-password').css("display","block");
+            });
+          });
+          if($(window).width() < 500)
+          {
+            $('.sign-up-mobile-view').click(function(event)
+            {
+              $('.login-tab-sign-in').removeClass('active');
+              $('.login-tab-sign-up').addClass('active');
+              $('.login-tab-sign-in').css("display","none");
+              $('.login-tab-sign-up').css("display","block");
+              $('#sign-in').css("display","none");
+              $('#sign-up').css("display","block");
+            });
+            $('.sign-in-mobile-view').click(function(event)
+            {
+              $('.login-tab-sign-up').removeClass('active');
+              $('.login-tab-sign-in').addClass('active');
+              $('.login-tab-sign-up').css("display","none");
+              $('.login-tab-sign-in').css("display","block");
+              $('#sign-up').css("display","none");
+              $('#sign-in').css("display","block");
+            });
+
+
+          }
+
+        }
+
+      </script>
+      <!-- End of Main page -->
+    </div>
+  </body>
+</html>

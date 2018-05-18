@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+<link href="css/bootstrap.css" rel="Stylesheet"/>
+<link href="css/animate.css" rel="Stylesheet"/>
+<link href="style.css" rel="Stylesheet"/>
+<script src="js/jquery-3.1.0.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/bootstrap.js"></script> <!-- UI -->
+<script src="js/carousel.js"></script> <!-- Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="js/hamburger.js"></script>
+<script src="js/sript.js"></script>
+<style>
+  .search-ajax-list-item{
+    background: rgba(0,0,0,0.5);
+    color: white;
+    cursor: pointer;
+    width: 50%;
+  }
+  .search-ajax-list-item{
+    padding: 12px;
+  }
+</style>
+</head>
+<body class="user-profile">
+  <div class="home-navigation-bar">
+    <ul class="navigation-content-1" style="display: flex;">
+      <li class="site-logo"><a href="index.html"><img class="logo" height="80px" width="100px" src="media/logo.png"/></a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="">Packages</a></li>
+    </ul>
+    <a class="navigation-content-2" href="login.html">Login</a>
+  </div>
+
+  <!-- Mobile Navigation -->
+
+  <nav class="navigation">
+  <div class="sidebar">
+    <div class="sidebar-list">
+        <div class="sidebar-item"><a href="service.html" class="sidebar-anchor">Service</a></div>
+        <div class="sidebar-item"><a href="#" class="sidebar-anchor">Packages</a></div>
+        <div class="sidebar-item"><a href="login.html" class="sidebar-anchor">Login</a></div>
+      </div>
+    </div>
+  <div class="nav-divider">
+    <div class="nav-container-1">
+        <div id="nav-icon4"><span></span><span></span><span></span></div>
+    </div>
+    <div class="nav-container-3"><a href="index.html">HomeMade</a></div>
+  </div>
+  </nav>
+  <b id="welcome">Welcome : <i>ashish.xenon@gmail.com</i></b>
+  <b id="logout"><a href="login.html">Log Out</a></b>
+  <div class="container">
+    <h3>Dashboard</h3>
+    <div class="row row-1">
+      <div class="dashboard-card col-md-6" id="intro-dashboard-card">
+        <div class="basic-intro">
+          <h5>Ashish Kujur</h5>
+          <p>Premium Member</p>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="member-mail-wrapper">
+                <div class="mail-icon"></div>
+                <p class="member-mail">ashish.xenon@gmail.com<p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="member-contact-wrapper">
+                <div class="contact-icon"></div>
+                <p class="member-contact">8826668679<p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <div class="social-links-wrapper">
+            <a href=""><div class="social-icon social-icon-1"></div></a>
+            <a href=""><div class="social-icon social-icon-2"></div></a>
+            <a href=""><div class="social-icon social-icon-3"></div></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-card col-md-5" id="dashboard-controls">
+        <p>
+          Welcome to your Dashboard ! Here you can manage your orders, rate and
+          review service professionals,
+          If you have a special skill that you wanna make money of,
+          then join in as a professional and expand your business. Cheers !
+        </p>
+        <div class="dashboard-controls-button-wrapper">
+          <a href="index.html">Go Home</a>
+          <a href="login.html">Logout</a>
+        </div>
+      </div>
+  </div>
+
+  <div class="row row-2">
+    <div class="dashboard-card col-md-6" id="dashboard-review-handyman">
+      <h4>Review</h4>
+        <form action="#" method="post">
+          <div class="combobox-wrapper">
+            <div>
+              <h6>Name</h6>
+              <select name="handymanNameList">
+                <option>Bruce Wayne</option>
+                <option>Alice Green</option>
+              </select>
+            </div>
+            <div>
+              <h6>Rating</h6>
+              <select name="handymanRatingList">
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+                <option>1</option>
+              </select>
+            </div>
+          </div>
+          <input type="submit" name="review-submit" value="Submit">
+        </form>
+    </div>
+    <div class="dashboard-card col-md-5" id="dashboard-order-tracking">
+      <h4>Orders</h4>
+      <ul class="past-order-container">
+        <li>
+          <div class="order-date">
+            <p>Date</p>
+            <strong>12/02/2018</strong>
+          </div>
+          <div class="order-handyman">
+            <strong>Alice Green</strong>
+            <p>Artist</p>
+          </div>
+          <div class="order-cost">
+            <p>Total</p>
+            <strong>30,000</strong>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

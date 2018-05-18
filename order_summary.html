@@ -1,0 +1,121 @@
+<?php include('includes/connection.php'); ?>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8"/>
+    <title>Handiman</title>
+    <link href="css/bootstrap.css" rel="Stylesheet"/>
+    <link href="css/animate.css" rel="Stylesheet"/>
+    <link href="style.css" rel="Stylesheet"/>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.js"></script> <!-- UI -->
+    <script src="js/carousel.js"></script> <!-- Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/sript.js"></script>
+    <style>
+      .search-ajax-list-item{
+        background: rgba(0,0,0,0.5);
+        color: white;
+        cursor: pointer;
+        width: 50%;
+      }
+      .search-ajax-list-item{
+        padding: 12px;
+      }
+    </style>
+
+  </head>
+
+  <body class="order-summary-page">
+    <!-- navigation Section -->
+    <div class="home-navigation-bar" style="position:relative;">
+      <ul class="navigation-content-1" style="display: flex;">
+        <li class="site-logo"><a href="index.html"><img class="logo" height="80px" width="100px" src="media/logo.png"/></a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="">Packages</a></li>
+      </ul>
+      <a class="navigation-content-2" href="login.html">Login</a>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="navigation">
+    <div class="sidebar">
+      <div class="sidebar-list">
+          <div class="sidebar-item"><a href="service.html" class="sidebar-anchor">Service</a></div>
+          <div class="sidebar-item"><a href="#" class="sidebar-anchor">Packages</a></div>
+          <div class="sidebar-item"><a href="login.html" class="sidebar-anchor">Login</a></div>
+        </div>
+      </div>
+    <div class="nav-divider">
+      <div class="nav-container-1">
+          <div id="nav-icon4"><span></span><span></span><span></span></div>
+      </div>
+      <div class="nav-container-3"><a href="index.html">HomeMade</a></div>
+    </div>
+    </nav>
+    <!-- End Mobile Navigation -->
+
+    <div class="order-summary-body">
+      <div class="billing-info">
+        <p id="customer-name">Ashish Kujur</p>
+        <p id="customer-address">B201/811 New Ashok Nagar, New Delhi, India 110096</p>
+        <div class="saved-card">
+          <div class="card-image" style="background-image:url(media/mastercard.png);"></div>
+          <div class="card-details">
+            <p class="card-holder">Ashish Kujur</p>
+            <p class="card-number">Maestro ending in <strong>4567</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-info">
+        <h5>Items in your cart</h5>
+        <div class="cart-item section-wrapper">
+          <div class="cart-item-section-1">
+            <p id="service-name">Web Developer</p>
+            <p id="service-type">Professional Help</p>
+            <p id="service-date">Date: <strong>20/02/2018</strong></p>
+          </div>
+          <div class="cart-item-section-2">
+            <p>UNIT PRICES</p>
+            <p>₹ 29,000</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-total">
+        <div class="service-total-header section-wrapper">
+          <p><b>SUBTOTAL</b> (Excluding VAT)</p>
+          <p>₹ 29,000</p>
+        </div>
+        <div class="service-total-body section-wrapper">
+          <p>VAT</p>
+          <p>₹ 1000</p>
+        </div>
+        <div class="service-total-footer section-wrapper">
+          <p>GRAND TOTAL</p>
+          <p>₹ 30,000</p>
+        </div>
+      </div>
+
+      <div class="service-Terms">
+        <form method="post" action="">
+          <input type="checkbox" name="termsAndCondition">
+          &nbsp;
+          I confirm that I have
+          read and agreed to the Terms and Conditions of sale and note that tickets
+          are non-refundable and non-transferable once purchased.
+          <div class="form-wrapper">
+            <a href="index.html">Home</a>
+            <input type="submit" value="Print Summary">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
